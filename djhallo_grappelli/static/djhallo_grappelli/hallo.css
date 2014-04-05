@@ -17,12 +17,20 @@ div.hallo-block * blockquote {
 }
 
 div.hallo-block article {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
     font-size: 13px;
     color: #737373;
     display: block;
     line-height: 1.5em;
-    width:49%;
+    width: 370px;
+}
+
+div.hallo-block article.edit {
+    background: #fff;
+    min-height: 380px;
+    margin-top: 0;
+    width: 355px;
+    padding: 10px;
 }
 
 div.hallo-block article * a {
@@ -82,11 +90,11 @@ div.hallo-block * blockquote {
     font-style: italic;
 }
 div.hallo-block * blockquote:before {
-    content:"\201C";
-    font-size:40px;
-    margin-left:-10px;
-    font-family:georgia,serif;
-    color:#eee;
+    content: "\201C";
+    font-size: 40px;
+    margin-left: -10px;
+    font-family: Georgia, serif;
+    color: #eee;
 }
 div.hallo-block * blockquote p {
     font-size: 14px;
@@ -119,7 +127,7 @@ div.hallo-block * pre {
 }
 div.hallo-block * pre code {
     background-color: #fff;
-    color:#737373;
+    color: #737373;
     font-size: 11px;
     padding: 0;
 }
@@ -142,7 +150,6 @@ div.hallo-block article div.hallo-block h2 {
 div.hallo-block article p {
     margin-top: 0px;
     margin-bottom: 0.5em;
-    text-indent: 2em;
 }
 
 div.hallo-block article {
@@ -164,7 +171,7 @@ div.hallotoolbar {
 }
 
 div.hallotoolbar .dropdown-target {
-    width: "200px";
+    width: 200px;
     background-color: #eeeeec;
     margin-top: -1px;
     border-left: 1px solid #babdb6;
@@ -179,8 +186,9 @@ div.hallotoolbar .dropdown-target .selected {
 }
 
 div.hallo-block textarea {
-    width: 49%;
-    float: right;
+    width: 370px;
+    margin-left: 10px;
+    float: left;
     min-height: 400px;
     color: #ffffff !important;
     background-color: #2e3436;

@@ -24,7 +24,10 @@ class HalloInput(forms.Textarea):
     def media(self):
         return forms.Media(
             css = {
-                'screen': ['%sdjhallo_grappelli/hallo.css' % settings.STATIC_URL]
+                'screen': (
+                    '%sdjhallo_grappelli/hallo.css' % settings.STATIC_URL,
+                    '%sdjhallo_grappelli/font-awesome/css/font-awesome.css' % settings.STATIC_URL
+                )
             },
             js = (
                 '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',

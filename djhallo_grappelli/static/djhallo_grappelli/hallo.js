@@ -1233,12 +1233,24 @@
         elements: ['h1', 'h2', 'h3', 'p', 'pre', 'blockquote']
       },
       _create: function() {
-        var buttonset, contentId, target;
+        var buttonize, buttonset;
+        var _this = this;
         buttonset = jQuery("<span class=\"" + this.widgetName + "\"></span>");
-        contentId = "" + this.options.uuid + "-" + this.widgetName + "-data";
-        target = this._prepareDropdown(contentId);
-        buttonset.append(target);
-        buttonset.append(this._prepareButton(target));
+        buttonize = function(cmd, label) {
+          var buttonElement;
+          buttonElement = jQuery('<span></span>');
+          buttonElement.hallobutton({
+            uuid: _this.options.uuid,
+            editable: _this.options.editable,
+            label: label,
+            icon: cmd === 'undo' ? 'icon-arrow-left' : 'icon-arrow-right',
+            command: cmd,
+            queryState: false
+          });
+          return buttonset.append(buttonElement);
+        };
+        buttonize('h1', 'H1');
+        buttonset.buttonset();
         return this.options.toolbar.append(buttonset);
       },
       _prepareDropdown: function(contentId) {
