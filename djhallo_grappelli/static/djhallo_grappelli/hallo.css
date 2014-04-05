@@ -125,12 +125,14 @@ div.hallo-block * pre code {
   padding: 0;
 }
 
-div.hallo-block article, div.hallo-block h1, div.hallo-block h2 {
+div.hallo-block article,
+div.hallo-block h1,
+div.hallo-block h2 {
   margin-bottom: 0px;
   padding-bottom: 0.5em;
 }
 
-div.hallo-block article, div.hallo-block h1 {
+div.hallo-block article div.hallo-block h1 {
   font-size: 24pt;
 }
 
